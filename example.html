@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link type="text/css" rel="stylesheet" href="jquery.zzimdak.tooltip.css" />
+<style type="text/css" rel="stylesheet">
+<!--
+table {width:800px;border-collapse:collapse; margin:50px auto 0;}
+caption {display:none;}
+th {border:1px solid #cccccc; background-color:#eeeeee; height:30px; line-height:30px; font-weight:bold;}
+td {border:1px solid #cccccc; height:30px; line-height:30px; text-align:center;}
+-->
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="jquery.zzimdak.tooltip.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$.ZTooltip({
+		data:{
+			'회원관리':'#type=member&seq={number}&name={name}',
+			'결제관리':'#type=settle&seq={number}&name={name}',
+			'쪽지관리':'#type=note&seq={number}&name={name}',
+			'문의관리':'#type=customer&seq={number}&name={name}'
+		}
+	});
+});
+//]]>
+</script>
+</head>
+<body>
+<table summary="게시물 리스트">
+	<caption>게시물 리스트</caption>
+	<colgroup>
+		<col width="10%" />
+		<col width="55%" />
+		<col width="15%" />
+		<col width="20%" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th style="width:10%;">번호</th>
+			<th style="width:55%;">제목</th>
+			<th style="width:15%;">작성자</th>
+			<th style="width:20%;">작성일</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>3</td>
+			<td>테스트입니다요</td>
+			<td><a href="#" class="tooltip" data-number="1" data-name="홍길동">홍길동</a></td>
+			<td>2011-10-09</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>테스트입니다요33</td>
+			<td><a href="#" class="tooltip" data-number="3" data-name="이영희">이영희</a></td>
+			<td>2011-10-08</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>22테스트입니다요</td>
+			<td><a href="#" class="tooltip" data-number="2" data-name="김철수">김철수</a></td>
+			<td>2011-10-01</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
